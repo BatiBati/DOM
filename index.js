@@ -55,15 +55,64 @@ const p_login = document.createElement("p")
 p_login.style.padding = "20px"; */
 
 //--------------//--------------//--------------//--------------//----
-document.body.style.width = "100px";
+document.body.style.width = "100%";
 document.body.style.textAlign = "center";
 
-const loginTitle = document.createElement("p")
+const loginTitle = document.createElement("p");
+
 loginTitle.innerHTML = "Login";
 loginTitle.style.fontSize = "60px";
 loginTitle.style.fontWeight = "Bold";
-document.getElementById("parentContainer").appendChild(login)
 
+document.getElementById("parentContainer").appendChild(loginTitle);
 const emailTitle = document.createElement("p");
-emailTitle = document 
 
+emailTitle.innerHTML = "Username";
+emailTitle.style.marginBottom = "5px";
+
+document.getElementById("parentContainer").appendChild(emailTitle);
+const inputEmail = document.createElement("input");
+
+document.getElementById("parentContainer").appendChild(inputEmail);
+const passwordTitle = document.createElement("p");
+
+passwordTitle.innerHTML = "Password";
+passwordTitle.style.marginBottom = "5px";
+
+document.getElementById("parentContainer").appendChild(passwordTitle);
+const inputPassword = document.createElement("input");
+
+inputPassword.style.marginBottom = "10px";
+
+document.getElementById("parentContainer").appendChild(inputPassword);
+
+const submitButton = document.createElement("p");
+
+submitButton.innerHTML = "Submit";
+submitButton.style.margin = "auto";
+submitButton.style.padding = "5px";
+
+submitButton.style.color = "white";
+submitButton.style.width = "fit-content";
+submitButton.style.background = "green";
+submitButton.style.borderRadius = "10px";
+
+document.getElementById("parentContainer").appendChild(submitButton);
+submitButton.addEventListener("click", () => {
+  if (inputEmail.value.includes("@gmail.com")) {
+    console.log(true);
+  } else {
+    const warning = document.createElement("p");
+    warning.innerHTML = "Please enter valid email";
+    warning.style.color = "red";
+    document.getElementById("parentContainer").appendChild(warning);
+  }
+  if (inputPassword.value.length >= 8) {
+    console.log(true);
+  } else {
+    const warning = document.createElement("p");
+    warning.innerHTML = "Password should contain 8 character at least";
+    warning.style.color = "red";
+    document.getElementById("parentContainer").appendChild(warning);
+  }
+});
