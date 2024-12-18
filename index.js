@@ -192,3 +192,13 @@ document.getElementById("password_container").appendChild(passwordTitle);
 //Password input
 const passwordInput = document.createElement("input");
 document.getElementById("password_container").appendChild(passwordInput);
+//Register button
+const registerButton = document.createElement("p");
+registerButton.innerHTML = "Register";
+registerButton.style.margin = "auto";
+registerButton.style.backgroundColor = "#ccc";
+registerButton.style.width = "50px";
+registerButton.style.padding = "10px";
+registerButton.style.border = "20px";
+registerButton.style.marginTop = "10px";
+document.getElementById("registrationContainer").appendChild(registerButton);
